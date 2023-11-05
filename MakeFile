@@ -1,0 +1,15 @@
+search.o: search.cpp search.h
+
+	g++ -c search.cpp
+
+sort_bubble.o: sort_bubble.cpp sort_bubble.h
+
+	g++ -c sort_bubble.cpp
+
+sort_quick.o: sort_quick.cpp sort_quick.h
+
+	g++ -c sort_quick.cpp
+
+main: main.cpp search.o sort_bubble.o sort_quick.o
+
+	g++ main.cpp search.o sort_bubble.o sort_quick.o -o main
